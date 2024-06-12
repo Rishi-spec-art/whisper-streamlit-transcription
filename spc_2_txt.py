@@ -2,7 +2,7 @@ import whisper
 
 class Model:
     def __init__(self) -> None:
-        self.model = whisper.load_model("medium")
+        self.model = whisper.load_model("base")
         
     def tran_scribe(self, file_path: str):
         tcription = self.model.transcribe(file_path, fp16 = False)
